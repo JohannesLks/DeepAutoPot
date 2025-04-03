@@ -13,10 +13,13 @@ services:
     networks:
      - h0neytr4p_local
     ports:
-      - "80:80"
+ #     - "80:80"
       - "443:443"
     image: "dtagdevsec/h0neytr4p:24.04"
     read_only: true
     volumes:
       - $HOME/tpotce/data/h0neytr4p/log/:/opt/h0neytr4p/log/
       - $HOME/tpotce/data/h0neytr4p/payloads/:/data/h0neytr4p/payloads/
+      - $HOME/tpotce/data/nginx/cert/nginx.crt:/opt/h0neytr4p/app.crt:ro
+      - $HOME/tpotce/data/nginx/cert/nginx.key:/opt/h0neytr4p/app.key:ro
+      - $HOME/tpotce/data/h0neytr4p/www/:/opt/h0neytr4p/www/
