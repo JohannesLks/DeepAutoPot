@@ -15,5 +15,7 @@ COPY --from=builder /app/traps /opt/h0neytr4p/traps
 #
 WORKDIR /opt/h0neytr4p
 USER 2000:2000
+COPY traps /opt/h0neytr4p/traps
+COPY www /opt/h0neytr4p/www
 CMD ["-cert=app.crt", "-key=app.key", "-log=log/log.json", "-catchall=false", "-payload=/data/h0neytr4p/payloads/", "-wildcard=true", "-traps=traps/"]
 ENTRYPOINT ["./h0neytr4p"]

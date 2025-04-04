@@ -1,0 +1,56 @@
+{
+    "BasicInfo": {
+      "Name": "web443",
+      "Port": "443",
+      "Protocol": "HTTP",
+      "MitreAttackTags": "",
+      "References": "",
+      "RiskRating": "Info",
+      "Description": "Password Check Web Interface"
+    },
+    "Behaviour": [
+      {
+        "Request": {
+          "Url": "/",
+          "Method": "GET",
+          "Headers": {},
+          "Params": {}
+        },
+        "Response": {
+          "StatusCode": 200,
+          "Body": "/opt/h0neytr4p/www/index.html",
+          "Type": "file"
+        },
+        "trap": "false"
+      },
+      {
+        "Request": {
+          "Url": "/css/style.css",
+          "Method": "GET",
+          "Headers": {},
+          "Params": {}
+        },
+        "Response": {
+          "StatusCode": 200,
+          "Body": "/opt/h0neytr4p/www/css/style.css",
+          "Type": "file"
+        },
+        "trap": "false"
+      },
+      {
+        "Request": {
+          "Url": "/js/strength.js",
+          "Method": "GET",
+          "Headers": {},
+          "Params": {}
+        },
+        "Response": {
+          "StatusCode": 200,
+          "Body": "/opt/h0neytr4p/www/js/strength.js",
+          "Type": "file"
+        },
+        "trap": "false"
+      }
+    ]
+  }
+  
